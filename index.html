@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Lottle — Arumbakkam, Chennai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Bebas+Neue&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader" role="status" aria-label="Loading Cafe Lottle">
+    <div class="loader-cup">
+      <div class="cup-body">
+        <div class="cup-fill"></div>
+        <div class="cup-sheen"></div>
+      </div>
+      <div class="cup-handle"></div>
+      <div class="cup-saucer"></div>
+    </div>
+    <p class="loader-text">Cafe Lottle</p>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" aria-label="Main navigation">
+    <a href="#home" class="nav-logo">Cafe <span>Lottle</span></a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li class="dropdown">
+        <a href="#menu">Menu ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#menu" onclick="switchTab('drinks')">☕ Drinks</a></li>
+          <li><a href="#menu" onclick="switchTab('snacks')">🥨 Snacks</a></li>
+          <li><a href="#menu" onclick="switchTab('shakes')">🥤 Milkshakes & Waffles</a></li>
+          <li><a href="#menu" onclick="switchTab('biryani')">🍛 Biryani</a></li>
+        </ul>
+      </li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/cafe.lottle/" target="_blank" class="icon-btn" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 7.9A3.1 3.1 0 1 0 8.9 12 3.1 3.1 0 0 0 12 15.1zm4.9-8.4a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z" />
+        </svg>
+      </a>
+
+      <!-- Zomato -->
+      <a href="https://www.zomato.com/chennai/cafe-lottle-arumbakkam" target="_blank" class="btn-outline zomato-btn">
+        View on Zomato
+      </a>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme"
+        aria-label="Toggle dark/light theme">🌙</button>
+      <a href="tel:+919876543210" class="btn-primary">Call Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="#home" onclick="closeMobile()">Home</a>
+    <a href="#menu" onclick="closeMobile()">Menu</a>
+    <a href="#story" onclick="closeMobile()">Our Story</a>
+    <a href="#gallery" onclick="closeMobile()">Gallery</a>
+    <a href="#reviews" onclick="closeMobile()">Reviews</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </nav>
+
+  <!-- PROMO BANNER -->
+  <div class="promo-banner" style="margin-top:72px">
+    🍛 Special Chicken Dum Biryani Available Today · 🥤 Buy 2 Shakes Get 1 Free · ⭐ Top Rated Cafe near Arumbakkam
+  </div>
+
+  <!-- HOME / HERO -->
+  <section id="home" style="padding:0; margin-top:-72px;">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">A Little means a Lot</div>
+        <h1 class="hero-title">
+          <em>Sip, Snack</em><br>
+          <strong>&amp; Love</strong>
+        </h1>
+        <p class="hero-desc">
+          A cozy corner cafe in Arumbakkam, Chennai — where every cup tells a story and every bite brings you home.
+          Authentic flavours, warm ambience, made with love.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary" style="font-size:0.9rem; padding:14px 28px;">Explore Menu</a>
+          <a href="#story" class="btn-outline"
+            style="font-size:0.9rem; padding:14px 28px; border-color:rgba(250,246,240,0.3); color:rgba(250,246,240,0.8);">Our
+            Story</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">500+</span>
+            <span class="stat-label">Happy Cups Daily</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">4.3★</span>
+            <span class="stat-label">Google Rating</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">3 Yrs</span>
+            <span class="stat-label">Of Goodness</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coffee Pour Visual -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="coffee-scene">
+          <div class="pour-stream">
+            <div class="stream-line"></div>
+            <div class="stream-drops">
+              <div class="drop"></div>
+              <div class="drop"></div>
+              <div class="drop"></div>
+            </div>
+          </div>
+          <div class="coffee-cup-large">
+            <div class="cup-main">
+              <div class="cup-liquid"></div>
+              <div class="cup-sheen"></div>
+            </div>
+            <div class="cup-handle-large"></div>
+            <div class="cup-saucer-large"></div>
+            <div class="steam-container">
+              <div class="steam"></div>
+              <div class="steam"></div>
+              <div class="steam"></div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="highlights">
+    <div class="section-header center reveal">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">The <em>Lottle</em> Difference</h2>
+      <p class="section-desc">Every detail matters — from the ingredients we source to the warmth you feel walking in.
+      </p>
+    </div>
+    <div class="highlights-grid">
+      <div class="highlight-card reveal" style="transition-delay:0.1s">
+        <span class="highlight-icon">🌿</span>
+        <h3 class="highlight-title">Fresh Ingredients</h3>
+        <p class="highlight-desc">We source locally and prep daily. No shortcuts, no compromises — just pure, fresh
+          goodness in every bite.</p>
+      </div>
+      <div class="highlight-card reveal" style="transition-delay:0.2s">
+        <span class="highlight-icon">👨‍🍳</span>
+        <h3 class="highlight-title">Authentic Taste</h3>
+        <p class="highlight-desc">Traditional recipes, family secrets, and a touch of Chennai soul. Tastes exactly like
+          you remember home.</p>
+      </div>
+      <div class="highlight-card reveal" style="transition-delay:0.3s">
+        <span class="highlight-icon">💰</span>
+        <h3 class="highlight-title">Affordable Pricing</h3>
+        <p class="highlight-desc">Premium quality at student-friendly prices. Great food shouldn't break the bank — and
+          here, it never does.</p>
+      </div>
+      <div class="highlight-card reveal" style="transition-delay:0.4s">
+        <span class="highlight-icon">☕</span>
+        <h3 class="highlight-title">Cozy Ambience</h3>
+        <p class="highlight-desc">A warm, inviting space perfect for study sessions, catch-ups, or just a quiet moment
+          with a great cup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="section-header reveal">
+      <span class="section-label">What We Serve</span>
+      <h2 class="section-title">Our <em>Signature</em> <strong>Menu</strong></h2>
+      <p class="section-desc">Our signature menu features a curated selection of Sandwich, Chinese, Fast Food, Street
+        Food, Desserts, and Shakes, thoughtfully organized into clean, easy-to-navigate sections for a seamless and
+        enjoyable browsing experience.</p>
+    </div>
+    <div class="menu-tabs reveal" role="tablist" aria-label="Menu categories">
+      <button class="menu-tab active" role="tab" aria-selected="true" onclick="switchTab('drinks')">☕ Drinks</button>
+      <button class="menu-tab" role="tab" aria-selected="false" onclick="switchTab('snacks')">🥨 Snacks</button>
+      <button class="menu-tab" role="tab" aria-selected="false" onclick="switchTab('shakes')">🥤 Milkshakes &
+        Waffles</button>
+      <button class="menu-tab" role="tab" aria-selected="false" onclick="switchTab('biryani')">🍛 Biryani</button>
+    </div>
+
+    <!-- DRINKS -->
+    <div class="menu-panel active" id="panel-drinks" role="tabpanel">
+      <div class="menu-grid">
+        <div class="menu-card reveal">
+          <!-- Menu item: Filter Kaapi -->
+          <div class="menu-img">
+            <img src="images/cappuccino.jpg" alt="Cappuccino" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Cappucino</h3>
+            <p class="menu-desc">Espresso with Foamed milk.</p>
+            <div class="menu-footer"><span class="menu-price">₹169</span><span
+                class="menu-tag bestseller">Bestseller</span></div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Masala Chai -->
+          <!-- TODO: Replace with real cafe image -->
+          <div class="menu-img">
+            <img src="images/hotchocolate.jpg" alt="Hot Chocolate" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Hot Chocolate</h3>
+            <p class="menu-desc">Rich and Warm Chocolate Drink.</p>
+            <div class="menu-footer"><span class="menu-price">₹199</span><span class="menu-tag">Popular</span></div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Cold Coffee -->
+          <div class="menu-img">
+            <img src="images/latte.jpg" alt="Latte" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Latte</h3>
+            <p class="menu-desc">Smooth espresso with steamed milk</p>
+            <div class="menu-footer"><span class="menu-price">₹199</span><span
+                class="menu-tag bestseller">Bestseller</span></div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Fresh Lime Soda -->
+          <div class="menu-img">
+            <img src="images/icedamericano.jpg" alt="Iced Americano" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Iced Americano</h3>
+            <p class="menu-desc">Simple and strong espresso with water.</p>
+            <div class="menu-footer"><span class="menu-price">₹159</span><span class="menu-tag">Sweet</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SNACKS -->
+    <div class="menu-panel" id="panel-snacks" role="tabpanel">
+      <div class="menu-grid">
+        <div class="menu-card reveal">
+          <!-- Menu item: Veg Sandwich -->
+          <div class="menu-img">
+            <img src="images/sandwich.jpeg" alt="Sandwich">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Chettinadu Chicken And Mozzarella Sandwich</h3>
+            <p class="menu-desc">Slow cooked chicken masala with spices sandwich to spice heaven</p>
+            <div class="menu-footer"><span class="menu-price">₹299</span><span
+                class="menu-tag bestseller">Bestseller</span></div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Masala Toast -->
+          <div class="menu-img">
+            <img src="images/ommush.jpeg" alt="Oh My Mushroom">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Oh My Mushroom</h3>
+            <p class="menu-desc">Oh My Mushroom-Warm Creamy Comfort in Every Bite.</p>
+            <div class="menu-footer"><span class="menu-price">₹199</span><span class="menu-tag">Creamy</span></div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Egg Puff -->
+          <div class="menu-img">
+            <img src="images/kcb.jpeg" alt="Korean Chicken Burger">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Korean Chicken Burger</h3>
+            <p class="menu-desc">Delecious, Handheld Burger.</p>
+            <div class="menu-footer"><span class="menu-price">₹289</span><span
+                class="menu-tag bestseller">Bestseller</span></div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Crispy Fries -->
+          <div class="menu-img">
+            <img src="images/sppcfries.jpeg" alt="Spicy Peri Peri Chicken Fries">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Spicy Peri Peri Chicken Fries</h3>
+            <p class="menu-desc">World famous butter masala of chicken Loaded on Fries.</p>
+            <div class="menu-footer"><span class="menu-price">₹299</span><span class="menu-tag">Spicy</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MILKSHAKES & WAFFLES -->
+    <div class="menu-panel" id="panel-shakes" role="tabpanel">
+      <div class="menu-grid">
+        <div class="menu-card reveal">
+          <!-- Menu item: Strawberry Bliss -->
+          <div class="menu-img">
+            <img src="images/oreo.jpeg" alt="Oreo Shake" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Oreo Shakes</h3>
+            <p class="menu-desc">Creamy blended milkshakes with premium ingredients.</p>
+            <div class="menu-footer"><span class="menu-price">₹199</span><span class="menu-tag bestseller">Creamy</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Choco Overload -->
+          <div class="menu-img">
+            <img src="images/nutella.jpeg" alt="Nutella Overload Shake" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Nutella Overload Shakes</h3>
+            <p class="menu-desc">Pure Nutella bliss in Every Sip.</p>
+            <div class="menu-footer"><span class="menu-price">₹249</span><span
+                class="menu-tag bestseller">Chocolaty</span></div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Mango Madness -->
+          <div class="menu-img">
+            <img src="images/kitkat.jpeg" alt="KitKat Waffles" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Kit Kat Waffles</h3>
+            <p class="menu-desc">Freshly Baked crispy Belgian Waffle.</p>
+            <div class="menu-footer"><span class="menu-price">₹220</span><span class="menu-tag">Crispy</span></div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Mixed Berry Crush -->
+          <div class="menu-img">
+            <img src="images/pink.jpeg" alt="Pink Choco Waffle" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Pink Choco Waffles</h3>
+            <p class="menu-desc">A Chocolaty Delight in Every Bite.</p>
+            <div class="menu-footer"><span class="menu-price">₹270</span><span class="menu-tag">Dreamy</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BIRYANI -->
+    <div class="menu-panel" id="panel-biryani" role="tabpanel">
+      <div class="menu-grid">
+        <div class="menu-card reveal">
+          <!-- Menu item: Chicken Dum Biryani -->
+
+          <div class="menu-img">
+            <img src="images/biryani.jpeg" alt="Biryani" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Chicken Dum Biryani</h3>
+            <p class="menu-desc">Slow-cooked on dum with fragrant basmati, whole spices, and tender chicken.</p>
+            <div class="menu-footer"><span class="menu-price">₹75/₹115</span><span class="menu-tag bestseller">Chef's
+                Special</span></div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Veg Biryani -->
+
+          <div class="menu-img">
+            <img src="images/c65.jpeg" alt="Chicken 65" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Chicken 65</h3>
+            <p class="menu-desc">The Ultimate South Indian Crunch</p>
+            <div class="menu-footer"><span class="menu-price">₹55</span><span class="menu-tag">Crunchy</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Egg Biryani -->
+
+          <div class="menu-img">
+            <img src="images/karaikudi.jpeg" alt="Karaikudi Chicken" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Kaaraikudi Fried Chicken Fries</h3>
+            <p class="menu-desc">Spicy Fried Chicken with Chettinadu.</p>
+            <div class="menu-footer"><span class="menu-price">₹289</span><span
+                class="menu-tag bestseller">Popular</span></div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <!-- Menu item: Prawn Biryani -->
+
+          <div class="menu-img">
+            <img src="images/korean.jpeg" alt="Korean Chicken" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-name">Crunchy Korean Chicken</h3>
+            <p class="menu-desc">Boneless Crunchy Chicken Thigh Tossed in Sweet Chilli Sauce </p>
+            <div class="menu-footer"><span class="menu-price">₹289</span><span class="menu-tag">Special</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section id="story">
+    <div class="story-grid">
+      <div class="story-visual reveal-left">
+        <!-- Story image: Cafe interior with coffee -->
+        <img src="images/cafe1.jpeg" class="img1">
+        <img src="images/cafe2.jpeg" class="img2">
+        <div class="story-year-badge">
+          <span class="yr">2022</span>
+          <span class="est">EST.</span>
+        </div>
+      </div>
+      <div class="story-text reveal-right">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">Born from a <em>Passion</em> for Real Food</h2>
+        <p>
+          Cafe Lottle started as a simple dream — a cozy spot where students from DG Vaishnav College and residents of
+          Arumbakkam could enjoy <em>honest, delicious food</em> without burning a hole in their pockets.
+        </p>
+        <p>
+          We opened our doors in 2022, and since then, we've been on a mission to bring warmth, good taste, and
+          community together. Our filter kaapi is brewed the traditional way, our biryani is cooked on slow dum, and
+          every dish is made with the care of a home kitchen.
+        </p>
+        <p>
+          From a single counter to a full menu of drinks, bites, shakes, and biryanis — the journey has been fuelled by
+          your love and our <em>relentless passion for great food</em>.
+        </p>
+        <div class="story-pills">
+          <span class="story-pill">🌿 Locally Sourced</span>
+          <span class="story-pill">🍳 Made Fresh Daily</span>
+          <span class="story-pill">❤️ Family Recipes</span>
+          <span class="story-pill">🎓 Student Friendly</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-header reveal">
+      <span class="section-label">Gallery</span>
+      <h2 class="section-title">Moments at <em>Cafe Lottle</em></h2>
+      <p class="section-desc">
+        A visual glimpse of our ambience, signature food, and cozy cafe experience.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card reveal">
+        <img src="images/gallery1.jfif" alt="Cafe Front View" loading="lazy">
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="images/gallery2.jpeg" alt="Cafe Interior" loading="lazy">
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="images/gallery3.jpeg" alt="Coffee and Snacks" loading="lazy">
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="images/gallery4.jpeg" alt="Signature Food" loading="lazy">
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="images/gallery5.jpeg" alt="Milkshakes and Waffles" loading="lazy">
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="images/gallery6.jpeg" alt="Cafe Ambience" loading="lazy">
+      </div>
+
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">✕</button>
+      <div id="lightboxEmoji">☕</div>
+    </div>
+  </div>
+
+  <section id="reviews">
+    <div class="section-header center reveal">
+      <span class="section-label">Reviews</span>
+      <h2 class="section-title">What People <em>Love</em></h2>
+      <p class="section-desc">Feedback from customers who keep coming back for our food and drinks.</p>
+    </div>
+    <div class="reviews-grid reveal">
+      <div class="review-card">
+        <div class="review-quote">“</div>
+        <p class="review-text">The filter coffee here is the best in Arumbakkam, and the biryani is always perfectly
+          spiced.</p>
+        <div class="review-footer">
+          <div class="reviewer-avatar">A</div>
+          <div>
+            <div class="reviewer-name">Ananya</div>
+            <div class="reviewer-source">Google Review · 5 stars</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-quote">“</div>
+        <p class="review-text">Cozy ambience, student-friendly prices, and a warm welcome every time.</p>
+        <div class="review-footer">
+          <div class="reviewer-avatar">R</div>
+          <div>
+            <div class="reviewer-name">Ravi</div>
+            <div class="reviewer-source">Instagram · 5 stars</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-quote">“</div>
+        <p class="review-text">Perfect place for study sessions. The shakes are thick and delicious.</p>
+        <div class="review-footer">
+          <div class="reviewer-avatar">S</div>
+          <div>
+            <div class="reviewer-name">Sneha</div>
+            <div class="reviewer-source">Facebook · 5 stars</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-header reveal">
+      <span class="section-label">Contact</span>
+      <h2 class="section-title">Say Hello or Place an Order</h2>
+      <p class="section-desc">Reach out for reservations, delivery, or just to let us know you’re on your way.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text"><strong>Arumbakkam, Chennai</strong>Near DG Vaishnav College</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-text"><strong>+91 98765 43210</strong>Call to order or reserve</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div class="contact-text"><strong>Open Daily</strong>11:00 AM – 02.00 AM</div>
+          </div>
+        </div>
+        <div class="map-embed"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.362137204886!2d80.20899106448928!3d13.076220312714774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526700475dde2f%3A0xd0cfded7eace4e1c!2sCafe%20Lottle!5e0!3m2!1sen!2sin!4v1776505849528!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> width="100%" height="400"
+            style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe></div>
+      </div>
+      <form class="contact-form" onsubmit="event.preventDefault(); submitForm();">
+        <div class="form-group">
+          <label for="formName">Name</label>
+          <input type="text" id="formName" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label for="formContact">Contact</label>
+          <input type="text" id="formContact" placeholder="Phone or email" />
+        </div>
+        <div class="form-group">
+          <label for="formMsg">Message</label>
+          <textarea id="formMsg" rows="4" placeholder="Your message"></textarea>
+        </div>
+        <div id="formSuccess" style="display:none; color:#C46E6B;">Thanks! We’ll get back to you soon.</div>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <button id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <footer>
+    <div class="footer-brand">Cafe Lottle</div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div>© 2026 Cafe Lottle</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
