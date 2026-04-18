@@ -973,3 +973,21 @@ display:block;
   opacity: 1;
   transform: translateX(0);
 }
+
+.whatsapp-float{
+position:fixed;
+bottom:24px;
+right:24px;
+z-index:999;
+color:#25D366;
+}
+
+.whatsapp-float svg{
+display:block;
+filter:drop-shadow(0 4px 10px rgba(0,0,0,.18));
+transition:transform .3s ease;
+}
+
+.whatsapp-float:hover svg{
+transform:scale(1.08);
+}

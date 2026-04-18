@@ -5,6 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cafe Lottle — Arumbakkam, Chennai</title>
+
+  <meta name="description"
+    content="Cafe Lottle in Arumbakkam, Chennai serving coffee, milkshakes, waffles, snacks and biryani in a cozy ambience.">
+
+  <meta name="keywords" content="Cafe Lottle, cafe in Arumbakkam, coffee shop Chennai, milkshakes, waffles, biryani">
+
+  <meta name="author" content="Guhan Lakshmanan">
+
+  <meta property="og:title" content="Cafe Lottle">
+  <meta property="og:description" content="Sip, Snack & Love at Cafe Lottle">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/cafe1.jpeg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Bebas+Neue&display=swap"
@@ -35,10 +48,10 @@
       <li class="dropdown">
         <a href="#menu">Menu ▾</a>
         <ul class="dropdown-menu">
-          <li><a href="#menu" onclick="switchTab('drinks')">☕ Drinks</a></li>
-          <li><a href="#menu" onclick="switchTab('snacks')">🥨 Snacks</a></li>
-          <li><a href="#menu" onclick="switchTab('shakes')">🥤 Milkshakes & Waffles</a></li>
-          <li><a href="#menu" onclick="switchTab('biryani')">🍛 Biryani</a></li>
+          <li><a href="#menu" onclick="switchTab('drinks')">Drinks</a></li>
+          <li><a href="#menu" onclick="switchTab('snacks')">Snacks</a></li>
+          <li><a href="#menu" onclick="switchTab('shakes')">Milkshakes & Waffles</a></li>
+          <li><a href="#menu" onclick="switchTab('biryani')">Biryani</a></li>
         </ul>
       </li>
       <li><a href="#story">Our Story</a></li>
@@ -61,7 +74,7 @@
       </a>
       <button class="theme-toggle" id="themeToggle" title="Toggle theme"
         aria-label="Toggle dark/light theme">🌙</button>
-      <a href="tel:+919876543210" class="btn-primary">Call Now</a>
+      <a href="tel:+917358012441" class="btn-primary">Call Now</a>
       <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -153,6 +166,7 @@
       <span class="scroll-text">Scroll</span>
       <div class="scroll-line"></div>
     </div>
+
   </section>
 
   <!-- WHY CHOOSE US -->
@@ -163,32 +177,15 @@
       <p class="section-desc">Every detail matters — from the ingredients we source to the warmth you feel walking in.
       </p>
     </div>
-    <div class="highlights-grid">
-      <div class="highlight-card reveal" style="transition-delay:0.1s">
-        <span class="highlight-icon">🌿</span>
-        <h3 class="highlight-title">Fresh Ingredients</h3>
-        <p class="highlight-desc">We source locally and prep daily. No shortcuts, no compromises — just pure, fresh
-          goodness in every bite.</p>
-      </div>
-      <div class="highlight-card reveal" style="transition-delay:0.2s">
-        <span class="highlight-icon">👨‍🍳</span>
-        <h3 class="highlight-title">Authentic Taste</h3>
-        <p class="highlight-desc">Traditional recipes, family secrets, and a touch of Chennai soul. Tastes exactly like
-          you remember home.</p>
-      </div>
-      <div class="highlight-card reveal" style="transition-delay:0.3s">
-        <span class="highlight-icon">💰</span>
-        <h3 class="highlight-title">Affordable Pricing</h3>
-        <p class="highlight-desc">Premium quality at student-friendly prices. Great food shouldn't break the bank — and
-          here, it never does.</p>
-      </div>
-      <div class="highlight-card reveal" style="transition-delay:0.4s">
-        <span class="highlight-icon">☕</span>
-        <h3 class="highlight-title">Cozy Ambience</h3>
-        <p class="highlight-desc">A warm, inviting space perfect for study sessions, catch-ups, or just a quiet moment
-          with a great cup.</p>
-      </div>
+
+    <div class="story-pills" style="justify-content:center; margin-top:2rem;">
+      <span class="story-pill">Freshly Made Daily</span>
+      <span class="story-pill">Student-Friendly Pricing</span>
+      <span class="story-pill">Cozy Space Near DG Vaishnav</span>
+      <span class="story-pill">Signature Coffee & Biryani</span>
     </div>
+
+
   </section>
 
   <!-- MENU -->
@@ -201,11 +198,11 @@
         enjoyable browsing experience.</p>
     </div>
     <div class="menu-tabs reveal" role="tablist" aria-label="Menu categories">
-      <button class="menu-tab active" role="tab" aria-selected="true" onclick="switchTab('drinks')">☕ Drinks</button>
-      <button class="menu-tab" role="tab" aria-selected="false" onclick="switchTab('snacks')">🥨 Snacks</button>
-      <button class="menu-tab" role="tab" aria-selected="false" onclick="switchTab('shakes')">🥤 Milkshakes &
+      <button class="menu-tab active" role="tab" aria-selected="true" onclick="switchTab('drinks')">Drinks</button>
+      <button class="menu-tab" role="tab" aria-selected="false" onclick="switchTab('snacks')">Snacks</button>
+      <button class="menu-tab" role="tab" aria-selected="false" onclick="switchTab('shakes')">Milkshakes &
         Waffles</button>
-      <button class="menu-tab" role="tab" aria-selected="false" onclick="switchTab('biryani')">🍛 Biryani</button>
+      <button class="menu-tab" role="tab" aria-selected="false" onclick="switchTab('biryani')">Biryani</button>
     </div>
 
     <!-- DRINKS -->
@@ -217,7 +214,7 @@
             <img src="images/cappuccino.jpg" alt="Cappuccino" loading="lazy">
           </div>
           <div class="menu-info">
-            <h3 class="menu-name">Cappucino</h3>
+            <h3 class="menu-name">Cappuccino</h3>
             <p class="menu-desc">Espresso with Foamed milk.</p>
             <div class="menu-footer"><span class="menu-price">₹169</span><span
                 class="menu-tag bestseller">Bestseller</span></div>
@@ -452,10 +449,10 @@
           your love and our <em>relentless passion for great food</em>.
         </p>
         <div class="story-pills">
-          <span class="story-pill">🌿 Locally Sourced</span>
-          <span class="story-pill">🍳 Made Fresh Daily</span>
-          <span class="story-pill">❤️ Family Recipes</span>
-          <span class="story-pill">🎓 Student Friendly</span>
+          <span class="story-pill">Locally Sourced</span>
+          <span class="story-pill">Made Fresh Daily</span>
+          <span class="story-pill">Family Recipes</span>
+          <span class="story-pill">Student Friendly</span>
         </div>
       </div>
     </div>
@@ -517,35 +514,42 @@
     <div class="reviews-grid reveal">
       <div class="review-card">
         <div class="review-quote">“</div>
-        <p class="review-text">The filter coffee here is the best in Arumbakkam, and the biryani is always perfectly
-          spiced.</p>
+        <p class="review-text">Cafe Lottle is a great budget-friendly spot with generous portions and delicious food. We
+          tried the Karaikudi Chicken Fries, 3 Cheese Sandwich, and Mango Shake—all of which were flavorful and
+          satisfying. The Karaikudi Chicken Fries stood out with its spicy kick, and the Mango Shake, being the shake of
+          the month, was a steal at just ₹49. Highly recommended for a pocket-friendly and tasty outing!</p>
+        <div class="review-footer">
+          <div class="reviewer-avatar">T</div>
+          <div>
+            <div class="reviewer-name">Tina Elizabeth</div>
+            <div class="reviewer-source">Google Review · ★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-quote">“</div>
+        <p class="review-text">The staff were friendly and helped customise my drink according to my preferences. We
+          went around 11:30pm so ig that’s why the tables were dirty since it was nearing closing time. But all in all
+          good budget friendly and actually delicious</p>
         <div class="review-footer">
           <div class="reviewer-avatar">A</div>
           <div>
-            <div class="reviewer-name">Ananya</div>
-            <div class="reviewer-source">Google Review · 5 stars</div>
+            <div class="reviewer-name">Angelin Phebe Visuvasam</div>
+            <div class="reviewer-source">Google Review · ★★★★★</div>
           </div>
         </div>
       </div>
       <div class="review-card">
         <div class="review-quote">“</div>
-        <p class="review-text">Cozy ambience, student-friendly prices, and a warm welcome every time.</p>
+        <p class="review-text">Ambience is really good tasted belgium chocolate gelato it is so dark and chocky best
+          what we have ordered and strawberry gelato is too good with those sprinkles topping (must add)
+          Prices are affordable when compared other cafe!
+          Nice customer service they provide</p>
         <div class="review-footer">
-          <div class="reviewer-avatar">R</div>
+          <div class="reviewer-avatar">A</div>
           <div>
-            <div class="reviewer-name">Ravi</div>
-            <div class="reviewer-source">Instagram · 5 stars</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-quote">“</div>
-        <p class="review-text">Perfect place for study sessions. The shakes are thick and delicious.</p>
-        <div class="review-footer">
-          <div class="reviewer-avatar">S</div>
-          <div>
-            <div class="reviewer-name">Sneha</div>
-            <div class="reviewer-source">Facebook · 5 stars</div>
+            <div class="reviewer-name">Aravindhan</div>
+            <div class="reviewer-source">Google Review · ★★★★</div>
           </div>
         </div>
       </div>
@@ -574,25 +578,34 @@
             <div class="contact-text"><strong>Open Daily</strong>11:00 AM – 02.00 AM</div>
           </div>
         </div>
-        <div class="map-embed"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.362137204886!2d80.20899106448928!3d13.076220312714774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526700475dde2f%3A0xd0cfded7eace4e1c!2sCafe%20Lottle!5e0!3m2!1sen!2sin!4v1776505849528!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> width="100%" height="400"
+        <div class="map-embed"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.362137204886!2d80.20899106448928!3d13.076220312714774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526700475dde2f%3A0xd0cfded7eace4e1c!2sCafe%20Lottle!5e0!3m2!1sen!2sin!4v1776505849528!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"> width="100%" height="400"
             style="border:0;" allowfullscreen="" loading="lazy">
           </iframe></div>
       </div>
-      <form class="contact-form" onsubmit="event.preventDefault(); submitForm();">
+      <form action="https://formspree.io/f/xaqajqvb" method="POST" class="contact-form" onsubmit="submitForm(event)">
+
         <div class="form-group">
           <label for="formName">Name</label>
-          <input type="text" id="formName" placeholder="Your name" />
+          <input type="text" id="formName" name="name" required>
         </div>
+
         <div class="form-group">
           <label for="formContact">Contact</label>
-          <input type="text" id="formContact" placeholder="Phone or email" />
+          <input type="text" id="formContact" name="phone" required>
         </div>
+
         <div class="form-group">
           <label for="formMsg">Message</label>
-          <textarea id="formMsg" rows="4" placeholder="Your message"></textarea>
+          <textarea id="formMsg" name="message" required></textarea>
         </div>
-        <div id="formSuccess" style="display:none; color:#C46E6B;">Thanks! We’ll get back to you soon.</div>
-        <button type="submit" class="btn-primary">Send Message</button>
+
+        <button type="submit" class="btn-primary">
+          Send Message
+        </button>
+
       </form>
     </div>
   </section>
@@ -611,19 +624,51 @@
 
   <script src="script.js"></script>
   <script>
-const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+    const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
 
-window.addEventListener("scroll", () => {
-  reveals.forEach((el) => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
+    window.addEventListener("scroll", () => {
+      reveals.forEach((el) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
 
-    if (elementTop < windowHeight - 100) {
-      el.classList.add("active");
+        if (elementTop < windowHeight - 100) {
+          el.classList.add("active");
+        }
+      });
+    });
+  </script>
+  <a href="https://wa.me/917358012441" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="46" height="46" fill="currentColor">
+      <path
+        d="M19.11 17.21c-.27-.13-1.59-.78-1.84-.87-.25-.09-.43-.13-.61.14-.18.27-.7.87-.86 1.05-.16.18-.31.2-.58.07-.27-.13-1.13-.42-2.15-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.41.12-.54.13-.13.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.13-.61-1.47-.84-2.02-.22-.52-.44-.45-.61-.46h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.11 2.81c.13.18 1.91 2.92 4.63 4.1.65.28 1.16.45 1.56.57.66.21 1.26.18 1.73.11.53-.08 1.59-.65 1.81-1.27.22-.63.22-1.17.16-1.27-.07-.11-.25-.18-.52-.31z" />
+      <path
+        d="M16.01 3C8.84 3 3 8.76 3 15.86c0 2.28.6 4.5 1.74 6.46L3 29l6.89-1.8a13.1 13.1 0 0 0 6.12 1.56c7.17 0 13.01-5.76 13.01-12.86C29.02 8.76 23.18 3 16.01 3zm0 23.61c-1.95 0-3.85-.52-5.52-1.5l-.39-.23-4.09 1.07 1.09-3.98-.25-.4a10.68 10.68 0 0 1-1.64-5.7c0-5.94 4.84-10.77 10.8-10.77 5.95 0 10.8 4.83 10.8 10.77 0 5.94-4.85 10.74-10.8 10.74z" />
+    </svg>
+  </a>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+
+      const form = e.target;
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+        .then(response => {
+          if (response.ok) {
+            alert("Feedback received successfully!");
+            form.reset();
+          } else {
+            alert("Something went wrong.");
+          }
+        });
     }
-  });
-});
-</script>
+  </script>
 </body>
 
 </html>
