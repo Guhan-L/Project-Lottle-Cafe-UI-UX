@@ -189,7 +189,7 @@ body {
 
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  font-size: clamp(1.35rem, 4.5vw, 1.9rem);
   white-space: nowrap;
   ;
   font-weight: 600;
@@ -2272,6 +2272,6 @@ img {
 }
 @media (max-width:480px){
 .nav-logo{
-font-size:1.05rem;
+font-size:1.2rem;
 }
 }
