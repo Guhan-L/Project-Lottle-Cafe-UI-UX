@@ -991,3 +991,145 @@ transition:transform .3s ease;
 .whatsapp-float:hover svg{
 transform:scale(1.08);
 }
+
+
+/*Mobile responsive adjustmentsd*/
+
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* Tablet */
+@media (max-width: 992px){
+
+.hero-content{
+grid-template-columns:1fr;
+gap:2rem;
+padding-top:110px;
+text-align:center;
+}
+
+.hero-desc{
+margin-left:auto;
+margin-right:auto;
+}
+
+.hero-stats{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.coffee-scene{
+width:260px;
+height:300px;
+}
+
+.nav-links,
+.nav-actions .btn-primary,
+.nav-actions .btn-outline{
+display:none;
+}
+
+.hamburger{
+display:flex;
+}
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+section{
+padding:70px 6%;
+}
+
+#navbar{
+height:64px;
+}
+
+.nav-logo{
+font-size:1.5rem;
+}
+
+.hero-title{
+font-size:clamp(2.4rem,11vw,3.5rem);
+line-height:1.1;
+}
+
+.hero-actions{
+flex-direction:column;
+gap:1rem;
+}
+
+.hero-actions a{
+width:100%;
+text-align:center;
+}
+
+.menu-grid,
+.highlights-grid{
+grid-template-columns:1fr;
+}
+
+.story-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.float-badge{
+display:none;
+}
+
+.scroll-indicator{
+display:none;
+}
+
+.mobile-nav{
+padding:30px 8%;
+}
+
+.mobile-nav a{
+font-size:1.6rem;
+}
+}
+
+/* Small phones */
+@media (max-width:480px){
+
+.hero-stats{
+gap:1rem;
+}
+
+.stat-num{
+font-size:1.5rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+.menu-card{
+border-radius:16px;
+}
+
+.menu-img{
+height:150px;
+}
+}
+.cup-fill,
+.stream-line,
+.steam,
+.drop,
+.float-badge{
+will-change:transform;
+}
+@media (max-width:768px){
+.hero-grain{
+display:none;
+}
+
+#navbar.scrolled{
+backdrop-filter:none;
+}
+}
