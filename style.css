@@ -1133,3 +1133,10 @@ display:none;
 backdrop-filter:none;
 }
 }
+
+@media (max-width:768px){
+.icon-btn{
+width:44px;
+height:44px;
+}
+}
