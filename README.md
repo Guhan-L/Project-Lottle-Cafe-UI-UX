@@ -18,6 +18,8 @@ A modern and responsive cafe website designed to deliver a clean user experience
 - Smooth navigation
 - WhatsApp integration for easy customer contact
 - Optimized layout for real-world cafe business
+- Contact Form integrated using Formspree
+- Google Map Embedded
 
 ---
 
